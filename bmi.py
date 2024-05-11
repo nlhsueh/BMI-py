@@ -22,7 +22,7 @@ while True:
   bmi_set[n] = bmi
 
 # Just for test
-bmi_set = {'Nick':20, 'Kelly': 30, 'Jie': 17}
+# bmi_set = {'Nick':20, 'Kelly': 30, 'Jie': 17}
 
 normal, over_w, under_w = {}, {}, {}
 

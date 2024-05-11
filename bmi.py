@@ -21,6 +21,30 @@ while True:
   bmi = round(w/(h**2), 1)
   bmi_set[n] = bmi
 
-print ('------')
+# Just for test
+bmi_set = {'Nick':20, 'Kelly': 30, 'Jie': 17}
+
+normal, over_w, under_w = {}, {}, {}
+
 for k,v in bmi_set.items():
- print ('The BMI of {} is {}'.format(k, v))
+  # print ('The BMI of {} is {}'.format(k, v))
+  if (v>= 24):
+      over_w[k] = v
+  elif (v<= 18.5):
+      under_w[k] = v
+  else:
+    normal[k] = v
+
+if (not over_w and not under_w):
+  print ('Every one is good!!')
+
+if (over_w):
+  print ('Overweight people, please Exercise ⚽️⚽️!')
+  for k,v in over_w.items():
+    print ('The BMI of {} is {} '.format(k,v))
+  print ()
+
+if (under_w):
+  print ('Under weight people, please Eat more 🍖🍖!')
+  for k,v in under_w.items():
+    print ('The BMI of {} is {} '.format(k,v))

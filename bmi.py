@@ -1,40 +1,43 @@
-print ("Please input weight and height, press -9 to stop")
+print ('Welcome to BetterLife BMI System')
 bmi_set = {}
 
 while True:
-  n = str(input('Please input the name '))
-  if (n == '-9'):
+  go = input ('Press G/g to continue input; X/x to stop ')
+  if (go == 'X' or go == 'x'):
       break
+  elif (go not in ['G', 'g']):
+      continue
+  n = str(input('Please input the name '))
   while True:
       try:
         w = float(input('Please input the weight (kg) '))
       except ValueError:
         print ('Input should be a value, please re-input ')
         continue
+      if (w>500 or w<10):
+          print ('Weight should be in the range (10, 500), please re-input ')
+          continue
       break
-  if (w == -9):
-      break
-  elif (w>500 or w<10):
-      print ('Weight should be in the range (10, 500), please re-input ')
-      continue
   while True:
       try:
         h = float(input('Please input the height (m) '))
       except ValueError:
         print ('Input should be a value, please re-input ')
         continue
+      if (h > 2.2 or h <1):
+          print ('Height should be in the range (1, 2.2), please re-input ')
+          continue
       break
-  if (h == -9):
-      break
-  elif (h>2.2 or h <1):
-      print ('Height should be in the range (1, 2.2), please re-input ')
-      continue
-
   bmi = round(w/(h**2), 1)
   bmi_set[n] = bmi
+  print ('{} with {}kg, {}m and BMI {} is added'.format(n, w, h, bmi))
 
 # Just for test
-bmi_set = {'Nick':20, 'Kelly': 30, 'Jie': 17}
+# bmi_set = {'Nick':20, 'Kelly': 30, 'Jie': 17}
+
+print ('-------------------------------')
+print ('   Better Life Health Report   ')
+print ('-------------------------------')
 
 normal, over_w, under_w = {}, {}, {}
 

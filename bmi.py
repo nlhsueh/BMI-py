@@ -11,6 +11,7 @@ while True:
       except ValueError:
         print ('Input should be a value, please re-input ')
         continue
+      break
   if (w == -9):
       break
   elif (w>500 or w<10):
@@ -22,6 +23,7 @@ while True:
       except ValueError:
         print ('Input should be a value, please re-input ')
         continue
+      break
   if (h == -9):
       break
   elif (h>2.2 or h <1):

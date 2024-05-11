@@ -13,7 +13,7 @@ while True:
       continue
   h = float(input('Please input the height (m) '))
   if (h == -9):
-      break
+      break 
   elif (h>2.2 or h <1):
       print ('Height should be in the range (1, 2.2), please re-input ')
       continue

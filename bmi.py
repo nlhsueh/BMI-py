@@ -12,7 +12,7 @@ while True:
      break
   w = float(input('Please input the weight (公斤) '))
   if (w == -9):
-     break
+     break 
   h = float(input('Please input the height (公尺) '))
   if (h == -9):
      break
